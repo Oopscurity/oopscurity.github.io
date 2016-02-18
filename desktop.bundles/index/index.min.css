@@ -1,0 +1,28 @@
+/* ../../library.blocks/layer/layer.styl:begin */
+.layer {
+  margin: 0 auto;
+  width: 960px;
+}
+/* ../../library.blocks/layer/layer.styl:end */
+/* ../../libs/bem-core/common.blocks/clearfix/clearfix.css:begin */
+.clearfix:after
+{
+    display: table;
+    clear: both;
+
+    content: '';
+}
+/* ../../libs/bem-core/common.blocks/clearfix/clearfix.css:end */
+/* ../../library.blocks/clearfix/clearfix.styl:begin */
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: '';
+}
+/* ../../library.blocks/clearfix/clearfix.styl:end */
+/* ../../library.blocks/page/page.styl:begin */
+.page {
+  margin: 0;
+  padding: 0;
+}
+/* ../../library.blocks/page/page.styl:end */
