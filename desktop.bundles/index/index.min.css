@@ -20,9 +20,27 @@
   content: '';
 }
 /* ../../library.blocks/clearfix/clearfix.styl:end */
+/* ../../library.blocks/link/link.styl:begin */
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+/* ../../library.blocks/link/link.styl:end */
 /* ../../library.blocks/page/page.styl:begin */
 .page {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 /* ../../library.blocks/page/page.styl:end */
+/* ../../common.blocks/header/header.styl:begin */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+/* ../../common.blocks/header/header.styl:end */

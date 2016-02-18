@@ -14,7 +14,69 @@ module.exports = {
         {
             block: 'header',
             content: [
-
+                {
+                    elem: 'section',
+                    content: [
+                        {
+                            block: 'about',
+                            content: [
+                                {
+                                    elem: 'main',
+                                    content: [
+                                        {
+                                            block: 'text',
+                                            mods: { type: 'title' },
+                                            content: 'Artyom Kravchenko'
+                                        },
+                                        {
+                                            block: 'text',
+                                            mods: { type: 'description' },
+                                            content: 'Front End Developer'
+                                        }
+                                    ]
+                                },
+                                {
+                                    block: 'text',
+                                    mods: { type: 'title' },
+                                    mix: { block: 'about', elem: 'promo' },
+                                    content: 'True quality in the website development'
+                                },
+                                {
+                                    block: 'text',
+                                    mods: { block: 'description' },
+                                    mix: { block: 'about', elem: 'skills' },
+                                    content: [
+                                        'HTML', 'CSS', 'JavaScript', 'BEM'
+                                    ].join(' / ')
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    elem: 'section',
+                    content: [
+                        {
+                            block: 'social',
+                            content: [
+                                {},
+                                {}
+                            ].map(function(item) {
+                                return [
+                                    {
+                                        elem: 'item',
+                                        content: [
+                                            {
+                                                block: 'link',
+                                                url: item.url
+                                            }
+                                        ]
+                                    }
+                                ];
+                            })
+                        }
+                    ]
+                }
             ]
         },
         {
