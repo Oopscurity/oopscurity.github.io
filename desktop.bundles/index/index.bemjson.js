@@ -106,7 +106,13 @@ module.exports = {
         {
             block: 'content',
             content: [
-
+                {
+                    block: 'slider',
+                    js: { paint: true, together: 2 },
+                    content: [
+                        {}, {}, {}, {}, {}
+                    ]
+                }
             ]
         }
     ]
