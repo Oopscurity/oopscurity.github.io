@@ -83,12 +83,56 @@
   font-size: 14px;
 }
 /* ../../common.blocks/about/__skills/about__skills.styl:end */
+/* ../../common.blocks/social/social.styl:begin */
+.social {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  list-style: none;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+/* ../../common.blocks/social/social.styl:end */
+/* ../../common.blocks/social/__item/social__item.styl:begin */
+.social__item {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+/* ../../common.blocks/social/__item/social__item.styl:end */
 /* ../../library.blocks/link/link.styl:begin */
 .link {
   text-decoration: none;
   color: inherit;
 }
 /* ../../library.blocks/link/link.styl:end */
+/* ../../common.blocks/social/__link/social__link.styl:begin */
+.social__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 0.2s ease-out;
+          transition: opacity 0.2s ease-out;
+}
+.social__link::after {
+  font-size: 25px;
+  font-family: 'FontAwesome';
+  color: #fff;
+}
+.social__link:hover {
+  opacity: 0.5;
+}
+/* ../../common.blocks/social/__link/social__link.styl:end */
+/* ../../common.blocks/social/__link/_place/social__link_place_skype.styl:begin */
+.social__link_place_skype::after {
+  content: "\f17e";
+}
+/* ../../common.blocks/social/__link/_place/social__link_place_skype.styl:end */
+/* ../../common.blocks/social/__link/_place/social__link_place_mail.styl:begin */
+.social__link_place_mail::after {
+  content: "\f003";
+}
+/* ../../common.blocks/social/__link/_place/social__link_place_mail.styl:end */
 /* ../../common.blocks/footer/footer.styl:begin */
 .footer {
   position: absolute;
@@ -112,7 +156,6 @@
   left: 33.3333%;
   width: 66.6666%;
   height: 100vh;
-  background-color: #f00;
 }
 /* ../../common.blocks/content/content.styl:end */
 /* ../../library.blocks/slider/slider.styl:begin */
@@ -265,6 +308,11 @@
   box-sizing: border-box;
 }
 /* ../../common.blocks/page/page.styl:end */
+/* ../../common.blocks/social/__link/_place/social__link_place_github.styl:begin */
+.social__link_place_github::after {
+  content: "\f09b";
+}
+/* ../../common.blocks/social/__link/_place/social__link_place_github.styl:end */
 /* ../../library.blocks/slider/__control/_type/slider__control_type_prev.styl:begin */
 .slider__control_type_prev {
   left: 0;

@@ -6,6 +6,7 @@ module.exports = {
         { elem : 'meta', attrs : { name : 'description', content : '' } },
         { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
         { elem: 'css', url: 'https://fonts.googleapis.com/css?family=Raleway:300,400' },
+        { elem: 'css', url: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' },
         { elem : 'css', url : 'index.min.css' }
     ],
     scripts: [
@@ -65,8 +66,9 @@ module.exports = {
                                 {
                                     block: 'social',
                                     content: [
-                                        {},
-                                        {}
+                                        { place: 'github', url: '//github.com/oopscurity' },
+                                        { place: 'skype', url: 'skype:kravchenko-art?chat' },
+                                        { place: 'mail', url: 'mailto:oopscurity@mail.ru' }
                                     ].map(function(item) {
                                         return [
                                             {
@@ -74,6 +76,7 @@ module.exports = {
                                                 content: [
                                                     {
                                                         block: 'link',
+                                                        mix: { block: 'social', elem: 'link', elemMods: { place: item.place } },
                                                         url: item.url
                                                     }
                                                 ]
