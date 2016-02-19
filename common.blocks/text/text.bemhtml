@@ -1,0 +1,8 @@
+block('text')(
+	match(function() { return !this.ctx.tag && this.mods.ctx; })(
+		match(function() { return this.mods.ctx === 'page' })(
+			match(function() { return this.mods.type === 'title'}).tag()('h1'),
+			match(function() { return this.mods.type})()
+		)
+	)
+)

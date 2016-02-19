@@ -1,9 +1,14 @@
-/* ../../library.blocks/layer/layer.styl:begin */
-.layer {
-  margin: 0 auto;
-  width: 960px;
+/* ../../common.blocks/sidebar/sidebar.styl:begin */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #fff;
 }
-/* ../../library.blocks/layer/layer.styl:end */
+/* ../../common.blocks/sidebar/sidebar.styl:end */
 /* ../../libs/bem-core/common.blocks/clearfix/clearfix.css:begin */
 .clearfix:after
 {
@@ -20,12 +25,86 @@
   content: '';
 }
 /* ../../library.blocks/clearfix/clearfix.styl:end */
+/* ../../common.blocks/header/__section/header__section.styl:begin */
+.header__section {
+  padding-left: 30px;
+}
+/* ../../common.blocks/header/__section/header__section.styl:end */
+/* ../../common.blocks/about/about.styl:begin */
+.about {
+  margin-top: 120px;
+  padding-left: 30px;
+}
+/* ../../common.blocks/about/about.styl:end */
+/* ../../common.blocks/text/text.styl:begin */
+.text {
+  line-height: 28px;
+}
+/* ../../common.blocks/text/text.styl:end */
+/* ../../common.blocks/text/_type/text_type_title.styl:begin */
+.text_type_title {
+  font-weight: normal;
+}
+/* ../../common.blocks/text/_type/text_type_title.styl:end */
+/* ../../common.blocks/text/_ctx/text_ctx_page.styl:begin */
+/* ../../common.blocks/text/_ctx/text_ctx_page.styl:end */
+/* ../../common.blocks/about/__name/about__name.styl:begin */
+.about__name {
+  margin-left: -30px;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: normal;
+}
+.about__name:hover {
+  color: #ccc;
+}
+/* ../../common.blocks/about/__name/about__name.styl:end */
+/* ../../common.blocks/text/_type/text_type_description.styl:begin */
+.text_type_description {
+  font-weight: 300;
+  color: #808080;
+}
+/* ../../common.blocks/text/_type/text_type_description.styl:end */
+/* ../../common.blocks/about/__profession/about__profession.styl:begin */
+.about__profession {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+/* ../../common.blocks/about/__profession/about__profession.styl:end */
+/* ../../common.blocks/about/__promo/about__promo.styl:begin */
+.about__promo {
+  font-weight: 300;
+  font-size: 24px;
+}
+/* ../../common.blocks/about/__promo/about__promo.styl:end */
+/* ../../common.blocks/about/__skills/about__skills.styl:begin */
+.about__skills {
+  font-size: 14px;
+}
+/* ../../common.blocks/about/__skills/about__skills.styl:end */
 /* ../../library.blocks/link/link.styl:begin */
 .link {
   text-decoration: none;
   color: inherit;
 }
 /* ../../library.blocks/link/link.styl:end */
+/* ../../common.blocks/footer/footer.styl:begin */
+.footer {
+  position: absolute;
+  bottom: 40px;
+}
+/* ../../common.blocks/footer/footer.styl:end */
+/* ../../common.blocks/footer/__section/footer__section.styl:begin */
+.footer__section {
+  padding-left: 30px;
+}
+/* ../../common.blocks/footer/__section/footer__section.styl:end */
+/* ../../common.blocks/copyright/copyright.styl:begin */
+.copyright {
+  color: #555;
+}
+/* ../../common.blocks/copyright/copyright.styl:end */
 /* ../../library.blocks/page/page.styl:begin */
 .page {
   margin: 0;
@@ -33,14 +112,12 @@
   min-height: 100vh;
 }
 /* ../../library.blocks/page/page.styl:end */
-/* ../../common.blocks/header/header.styl:begin */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 33%;
-  height: 100vh;
-  background-color: #1a1a1a;
-  color: #fff;
+/* ../../common.blocks/page/page.styl:begin */
+.page {
+  font-family: 'Raleway', sans-serif;
+  background-color: #444;
 }
-/* ../../common.blocks/header/header.styl:end */
+.page * {
+  box-sizing: border-box;
+}
+/* ../../common.blocks/page/page.styl:end */
