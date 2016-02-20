@@ -111,7 +111,7 @@ module.exports = {
             content: [
                 {
                     block: 'slider',
-                    js: { paint: true, together: 2 },
+                    js: { paint: true, together: 2, wheel: 'page' },
                     content: [
                         {}, {}, {}, {}, {}
                     ]
