@@ -21,6 +21,12 @@
   background-color: #1a1a1a;
   color: #fff;
 }
+@media screen and (max-width: 760px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+  }
+}
 /* ../../common.blocks/sidebar/sidebar.styl:end */
 /* ../../libs/bem-core/common.blocks/clearfix/clearfix.css:begin */
 .clearfix:after
@@ -43,6 +49,13 @@
   margin-top: 120px;
   padding-left: 30px;
   max-width: 400px;
+}
+@media screen and (max-width: 760px) {
+  .about {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
 }
 /* ../../common.blocks/about/about.styl:end */
 /* ../../common.blocks/text/text.styl:begin */
@@ -69,6 +82,14 @@
 .about__name:hover {
   color: #ccc;
 }
+@media screen and (max-width: 760px) {
+  .about__name {
+    margin-left: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
 /* ../../common.blocks/about/__name/about__name.styl:end */
 /* ../../common.blocks/text/_type/text_type_description.styl:begin */
 .text_type_description {
@@ -81,16 +102,39 @@
   margin-bottom: 30px;
   font-size: 16px;
 }
+@media screen and (max-width: 760px) {
+  .about__profession {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
 /* ../../common.blocks/about/__profession/about__profession.styl:end */
 /* ../../common.blocks/about/__promo/about__promo.styl:begin */
 .about__promo {
+  margin-bottom: 5px;
   font-weight: 300;
   font-size: 24px;
+}
+@media screen and (max-width: 760px) {
+  .about__promo {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 /* ../../common.blocks/about/__promo/about__promo.styl:end */
 /* ../../common.blocks/about/__skills/about__skills.styl:begin */
 .about__skills {
+  margin-bottom: 30px;
   font-size: 14px;
+}
+@media screen and (max-width: 760px) {
+  .about__skills {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 /* ../../common.blocks/about/__skills/about__skills.styl:end */
 /* ../../common.blocks/social/social.styl:begin */
@@ -99,8 +143,13 @@
   padding: 0;
   outline: 0;
   list-style: none;
-  margin-top: 50px;
   margin-left: 30px;
+}
+@media screen and (max-width: 760px) {
+  .social {
+    margin-left: 0;
+    text-align: center;
+  }
 }
 /* ../../common.blocks/social/social.styl:end */
 /* ../../common.blocks/social/__item/social__item.styl:begin */
@@ -151,6 +200,13 @@
   width: 66.6666%;
   height: 100vh;
 }
+@media screen and (max-width: 760px) {
+  .content {
+    position: static;
+    display: block;
+    width: 100%;
+  }
+}
 /* ../../common.blocks/content/content.styl:end */
 /* ../../libs/oopsy/common.blocks/slider/slider.styl:begin */
 .slider {
@@ -161,15 +217,6 @@
   overflow: hidden;
 }
 /* ../../libs/oopsy/common.blocks/slider/slider.styl:end */
-/* ../../library.blocks/slider/slider.styl:begin */
-.slider {
-  position: relative;
-  display: inline-block;
-  width: 1080px;
-  height: 350px;
-  overflow: hidden;
-}
-/* ../../library.blocks/slider/slider.styl:end */
 /* ../../common.blocks/slider/slider.styl:begin */
 .slider {
   width: 100%;
@@ -177,18 +224,26 @@
   background-color: #1a1a1a;
 }
 /* ../../common.blocks/slider/slider.styl:end */
+/* ../../libs/oopsy/common.blocks/slider/_hidden/slider_hidden.styl:begin */
+.slider_hidden {
+  overflow: visible;
+}
+.slider_hidden .slider__menu {
+  display: none;
+}
+.slider_hidden .slider__control {
+  display: none;
+}
+.slider_hidden .slider__item {
+  display: block;
+}
+/* ../../libs/oopsy/common.blocks/slider/_hidden/slider_hidden.styl:end */
 /* ../../libs/oopsy/common.blocks/slider/__main/slider__main.styl:begin */
 .slider__main {
   height: 100%;
   width: 100%;
 }
 /* ../../libs/oopsy/common.blocks/slider/__main/slider__main.styl:end */
-/* ../../library.blocks/slider/__main/slider__main.styl:begin */
-.slider__main {
-  height: 100%;
-  width: 100%;
-}
-/* ../../library.blocks/slider/__main/slider__main.styl:end */
 /* ../../libs/oopsy/common.blocks/slider/__list/slider__list.styl:begin */
 .slider__list {
   margin: 0;
@@ -199,16 +254,6 @@
   height: 100%;
 }
 /* ../../libs/oopsy/common.blocks/slider/__list/slider__list.styl:end */
-/* ../../library.blocks/slider/__list/slider__list.styl:begin */
-.slider__list {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  list-style-type: none;
-  width: 100%;
-  height: 100%;
-}
-/* ../../library.blocks/slider/__list/slider__list.styl:end */
 /* ../../libs/oopsy/common.blocks/slider/__item/slider__item.styl:begin */
 .slider__item {
   display: inline-block;
@@ -217,14 +262,6 @@
   height: 100%;
 }
 /* ../../libs/oopsy/common.blocks/slider/__item/slider__item.styl:end */
-/* ../../library.blocks/slider/__item/slider__item.styl:begin */
-.slider__item {
-  display: inline-block;
-  vertical-align: top;
-  width: 100%;
-  height: 100%;
-}
-/* ../../library.blocks/slider/__item/slider__item.styl:end */
 /* ../../common.blocks/slider/__item/slider__item.styl:begin */
 .slider__item {
   position: relative;
@@ -260,15 +297,6 @@
   text-align: center;
 }
 /* ../../libs/oopsy/common.blocks/slider/__menu/slider__menu.styl:end */
-/* ../../library.blocks/slider/__menu/slider__menu.styl:begin */
-.slider__menu {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-/* ../../library.blocks/slider/__menu/slider__menu.styl:end */
 /* ../../common.blocks/slider/__menu/slider__menu.styl:begin */
 .slider__menu {
   display: none;
@@ -284,16 +312,6 @@
   background-color: #fff;
 }
 /* ../../libs/oopsy/common.blocks/slider/__toggle/slider__toggle.styl:end */
-/* ../../library.blocks/slider/__toggle/slider__toggle.styl:begin */
-.slider__toggle {
-  margin-right: 15px;
-  display: inline-block;
-  vertical-align: top;
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-}
-/* ../../library.blocks/slider/__toggle/slider__toggle.styl:end */
 /* ../../libs/oopsy/common.blocks/slider/__control/slider__control.styl:begin */
 .slider__control {
   position: absolute;
@@ -303,15 +321,6 @@
   background-color: #fff;
 }
 /* ../../libs/oopsy/common.blocks/slider/__control/slider__control.styl:end */
-/* ../../library.blocks/slider/__control/slider__control.styl:begin */
-.slider__control {
-  position: absolute;
-  top: calc(50% - 25px);
-  width: 30px;
-  height: 50px;
-  background-color: #fff;
-}
-/* ../../library.blocks/slider/__control/slider__control.styl:end */
 /* ../../common.blocks/slider/__control/slider__control.styl:begin */
 .slider__control {
   top: auto;
@@ -349,11 +358,6 @@
   right: 0;
 }
 /* ../../libs/oopsy/common.blocks/slider/__control/_type/slider__control_type_next.styl:end */
-/* ../../library.blocks/slider/__control/_type/slider__control_type_next.styl:begin */
-.slider__control_type_next {
-  right: 0;
-}
-/* ../../library.blocks/slider/__control/_type/slider__control_type_next.styl:end */
 /* ../../common.blocks/slider/__control/_type/slider__control_type_next.styl:begin */
 .slider__control_type_next {
   right: 30px;
@@ -419,6 +423,13 @@
   left: 30px;
   bottom: 40px;
 }
+@media screen and (max-width: 760px) {
+  .footer {
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
 /* ../../common.blocks/footer/footer.styl:end */
 /* ../../common.blocks/copyright/copyright.styl:begin */
 .copyright {
@@ -438,6 +449,11 @@
   background-color: #444;
   overflow: hidden;
 }
+@media screen and (max-width: 760px) {
+  .page {
+    overflow: visible;
+  }
+}
 .page ::-moz-selection {
   background-color: #888;
 }
@@ -451,7 +467,13 @@
 /* ../../common.blocks/header/header.styl:begin */
 .header {
   position: absolute;
+  top: 0;
   left: 30px;
+}
+@media screen and (max-width: 760px) {
+  .header {
+    left: 0;
+  }
 }
 /* ../../common.blocks/header/header.styl:end */
 /* ../../common.blocks/social/__link/_place/social__link_place_github.styl:begin */
@@ -464,11 +486,6 @@
   left: 0;
 }
 /* ../../libs/oopsy/common.blocks/slider/__control/_type/slider__control_type_prev.styl:end */
-/* ../../library.blocks/slider/__control/_type/slider__control_type_prev.styl:begin */
-.slider__control_type_prev {
-  left: 0;
-}
-/* ../../library.blocks/slider/__control/_type/slider__control_type_prev.styl:end */
 /* ../../common.blocks/slider/__control/_type/slider__control_type_prev.styl:begin */
 .slider__control_type_prev {
   left: auto;

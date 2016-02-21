@@ -28,7 +28,7 @@ var techs = {
         { path: 'libs/bem-components/desktop.blocks', check: false },
         { path: 'libs/bem-components/design/common.blocks', check: false },
         { path: 'libs/bem-components/design/desktop.blocks', check: false },
-        { path: 'libs/oopsy/common.blocks', check: false },
+        'libs/oopsy/common.blocks',
         'library.blocks',
         'common.blocks',
         'desktop.blocks'
