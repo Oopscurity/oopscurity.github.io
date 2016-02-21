@@ -102,9 +102,38 @@ module.exports = {
                     ].map(function(item) {
                         return [
                             {
-                                block: 'image',
-                                mix: { block: 'slider', elem: 'image' },
-                                url: 'http://oopscurity.github.io/website-templates/001/dev/img/index.jpg'
+                                elem: 'inner',
+                                content: [
+                                    {
+                                        block: 'image',
+                                        mix: { block: 'slider', elem: 'image' },
+                                        url: 'http://oopscurity.github.io/website-templates/001/dev/img/index.jpg'
+                                    },
+                                    {
+                                        elem: 'text-group',
+                                        content: [
+                                            {
+                                                block: 'text',
+                                                mods: { type: 'title', ctx: 'article' },
+                                                mix: { block: 'slider', elem: 'name' },
+                                                content: 'Barbershop'
+                                            },
+                                            {
+                                                block: 'text',
+                                                mods: { type: 'description', ctx: 'article' },
+                                                mix: { block: 'slider', elem: 'description' },
+                                                content: [
+                                                    {
+                                                        block: 'link',
+                                                        mix: { block: 'slider', elem: 'link' },
+                                                        url: 'http://oopscurity.github.io/website-templates/001/dist/index.html',
+                                                        content: 'link'
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ];
                     })
