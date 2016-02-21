@@ -126,7 +126,7 @@ module.exports = {
                                                     {
                                                         block: 'link',
                                                         mix: { block: 'slider', elem: 'link' },
-                                                        url: 'http://oopscurity.github.io/website-templates/001/dist/index.html',
+                                                        url: 'http://oopscurity.github.io/website-templates/001/dest/index.html',
                                                         content: 'link'
                                                     }
                                                 ]
