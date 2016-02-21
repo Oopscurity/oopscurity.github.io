@@ -9,6 +9,7 @@ modules.define(
 						var params = this.params;
 
 						this.current = 0;
+						this.sliding = false;
 						this.isVertical = (params.orientation === 'vertical') ? true : false;
 						this.mainSideProperty = this.isVertical ? 'height' : 'width';
 						this.mainSideValue = parseInt(this.domElem.css(this.mainSideProperty)) / params.together;
@@ -22,6 +23,9 @@ modules.define(
 							// it's waste if slideshow isn't used
 							// that's why the declaration is here
 							this.slideshow();
+						}
+						if (params.resize) {
+							this.bindToWin('resize', this._onResize);
 						}
 						if (params.wheel == 'page') {
 							if ('onwheel' in document) {
@@ -69,10 +73,15 @@ modules.define(
 					duration: 500,
 					together: 1,
 					wheel: false,
-					paint: true,
+					paint: false,
 					slideshow: false,
+					resize: true,
 					delay: 2000
 				};
+			},
+			_onResize: function(e) {
+				this.mainSideValue = parseInt(this.domElem.css(this.mainSideProperty)) / this.params.together;
+				this.setSize();
 			},
 			_onWheel: function(e) {
 				if (this.sliding) return;
@@ -94,6 +103,8 @@ modules.define(
 				}
 			},
 			_onToggleClick: function(e) {
+				if (this.sliding) return;
+
 				var target = $(e.currentTarget);
 				var index = target.index();
 
@@ -113,7 +124,6 @@ modules.define(
 			setSize: function() {
 				var property = this.mainSideProperty;
 				var value = this.mainSideValue;
-				console.log(this.params.together);
 
 				this.elem('list').css(property, value * this.params.together * this.elem('item').length);
 				this.elem('item').css(property, value);
@@ -137,8 +147,6 @@ modules.define(
 				});
 			},
 			slide: function(index) {
-				if (this.sliding) return;
-
 				var list = this.findElem('list'),
 					animatedProperty = this.isVertical ? 'marginTop' : 'marginLeft',
 					animatedData = {};

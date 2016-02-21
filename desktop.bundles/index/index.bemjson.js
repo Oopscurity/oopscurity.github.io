@@ -16,91 +16,76 @@ module.exports = {
         {
             block: 'sidebar',
             content: [
+
+            ]
+        },
+        {
+            block: 'header',
+            content: [
                 {
-                    block: 'header',
+                    elem: 'section',
                     content: [
                         {
-                            elem: 'section',
+                            block: 'about',
                             content: [
                                 {
-                                    block: 'about',
+                                    elem: 'main',
                                     content: [
-                                        {
-                                            elem: 'main',
-                                            content: [
-                                                {
-                                                    block: 'text',
-                                                    mods: { type: 'title', ctx: 'page' },
-                                                    mix: { block: 'about', elem: 'name' },
-                                                    content: 'Artyom Kravchenko'
-                                                },
-                                                {
-                                                    block: 'text',
-                                                    mods: { type: 'description' },
-                                                    mix: { block: 'about', elem: 'profession' },
-                                                    content: 'Front End Developer'
-                                                }
-                                            ]
-                                        },
                                         {
                                             block: 'text',
                                             mods: { type: 'title', ctx: 'page' },
-                                            mix: { block: 'about', elem: 'promo' },
-                                            content: 'True quality in the website development'
+                                            mix: { block: 'about', elem: 'name' },
+                                            content: 'Artyom Kravchenko'
                                         },
                                         {
                                             block: 'text',
                                             mods: { type: 'description' },
-                                            mix: { block: 'about', elem: 'skills' },
-                                            content: [
-                                                'HTML', 'CSS', 'JavaScript', 'BEM'
-                                            ].join(' / ')
+                                            mix: { block: 'about', elem: 'profession' },
+                                            content: 'Front End Developer'
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            elem: 'section',
-                            content: [
+                                },
                                 {
-                                    block: 'social',
+                                    block: 'text',
+                                    mods: { type: 'title', ctx: 'page' },
+                                    mix: { block: 'about', elem: 'promo' },
+                                    content: 'True quality in the website development'
+                                },
+                                {
+                                    block: 'text',
+                                    mods: { type: 'description' },
+                                    mix: { block: 'about', elem: 'skills' },
                                     content: [
-                                        { place: 'github', url: '//github.com/oopscurity' },
-                                        { place: 'skype', url: 'skype:kravchenko-art?chat' },
-                                        { place: 'mail', url: 'mailto:oopscurity@mail.ru' }
-                                    ].map(function(item) {
-                                        return [
-                                            {
-                                                elem: 'item',
-                                                content: [
-                                                    {
-                                                        block: 'link',
-                                                        mix: { block: 'social', elem: 'link', elemMods: { place: item.place } },
-                                                        url: item.url
-                                                    }
-                                                ]
-                                            }
-                                        ];
-                                    })
+                                        'HTML', 'CSS', 'JavaScript', 'BEM'
+                                    ].join(' / ')
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    block: 'footer',
+                    elem: 'section',
                     content: [
                         {
-                            elem: 'section',
+                            block: 'social',
                             content: [
-                                {
-                                    block: 'text',
-                                    mods: { type: 'description' },
-                                    mix: { block: 'copyright' },
-                                    content: '2016 &copy; Artyom Kravchenko'
-                                }
-                            ]
+                                { place: 'github', url: '//github.com/oopscurity' },
+                                { place: 'skype', url: 'skype:kravchenko-art?chat' },
+                                { place: 'mail', url: 'mailto:oopscurity@mail.ru' }
+                            ].map(function(item) {
+                                return [
+                                    {
+                                        elem: 'item',
+                                        content: [
+                                            {
+                                                block: 'link',
+                                                mix: { block: 'social', elem: 'link', elemMods: { place: item.place } },
+                                                url: item.url
+                                            }
+                                        ]
+                                    }
+                                ];
+                            })
                         }
                     ]
                 }
@@ -111,10 +96,29 @@ module.exports = {
             content: [
                 {
                     block: 'slider',
-                    js: { paint: true, together: 2, wheel: 'page' },
+                    js: { together: 2, wheel: 'page' },
                     content: [
                         {}, {}, {}, {}, {}
-                    ]
+                    ].map(function(item) {
+                        return [
+                            {
+                                block: 'image',
+                                mix: { block: 'slider', elem: 'image' },
+                                url: 'http://oopscurity.github.io/website-templates/001/dev/img/index.jpg'
+                            }
+                        ];
+                    })
+                }
+            ]
+        },
+        {
+            block: 'footer',
+            content: [
+                {
+                    block: 'text',
+                    mods: { type: 'description' },
+                    mix: { block: 'copyright' },
+                    content: '2016 &copy; Artyom Kravchenko'
                 }
             ]
         },
