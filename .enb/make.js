@@ -36,7 +36,7 @@ var techs = {
 
 module.exports = function(config) {
     var isProd = process.env.YENV === 'production';
-    //console.log(techs.js.buildFlow());
+    isProd = true;
 
     config.nodes('*.bundles/*', function(nodeConfig) {
         nodeConfig.addTechs([
@@ -86,11 +86,30 @@ module.exports = function(config) {
             }],
 
             // js
-            [techs.browserJs],
-            [techs.fileMerge, {
-                target: '?.pre.js',
-                sources: ['?.browser.bemhtml.js', '?.browser.js']
+            [enbBemTechs.depsByTechToBemdecl, {
+                target: '?.js-js.bemdecl.js',
+                sourceTech: 'js'
             }],
+            [enbBemTechs.mergeBemdecl, {
+                sources: ['?.bemdecl.js', '?.js-js.bemdecl.js'],
+                target: '?.js.bemdecl.js'
+            }],
+            [enbBemTechs.deps, {
+                target: '?.js.deps.js',
+                bemdeclFile: '?.js.bemdecl.js'
+            }],
+            [enbBemTechs.files, {
+                depsFile: '?.js.deps.js',
+                filesTarget: '?.js.files',
+                dirsTarget: '?.js.dirs'
+            }],
+            [techs.browserJs, {
+                filesTarget: '?.js.files'
+            }],
+             [techs.fileMerge, {
+                 target: '?.pre.js',
+                 sources: ['?.browser.bemhtml.js', '?.browser.js'],
+             }],
             [techs.prependYm, { source: '?.pre.js' }],
 
             // borschik
