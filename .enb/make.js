@@ -36,6 +36,7 @@ var techs = {
 
 module.exports = function(config) {
     var isProd = process.env.YENV === 'production';
+    //console.log(techs.js.buildFlow());
 
     config.nodes('*.bundles/*', function(nodeConfig) {
         nodeConfig.addTechs([

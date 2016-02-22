@@ -49,7 +49,7 @@ module.exports = {
                                     block: 'text',
                                     mods: { type: 'title', ctx: 'page' },
                                     mix: { block: 'about', elem: 'promo' },
-                                    content: 'True quality in the website development'
+                                    content: 'True quality<br>in the website development'
                                 },
                                 {
                                     block: 'text',
@@ -106,6 +106,7 @@ module.exports = {
                                 content: [
                                     {
                                         block: 'image',
+                                        js: false,
                                         mix: { block: 'slider', elem: 'image' },
                                         url: 'http://oopscurity.github.io/website-templates/001/dev/img/index.jpg'
                                     },
@@ -127,7 +128,7 @@ module.exports = {
                                                         block: 'link',
                                                         mix: { block: 'slider', elem: 'link' },
                                                         url: 'http://oopscurity.github.io/website-templates/001/dest/index.html',
-                                                        content: 'link'
+                                                        content: 'visit'
                                                     }
                                                 ]
                                             }
