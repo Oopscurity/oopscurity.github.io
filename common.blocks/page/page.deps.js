@@ -1,3 +1,3 @@
 ({
-	shouldDeps: { block: 'preloader' }
+	shouldDeps: { block: 'preloader', mods: { visible: true } }
 })

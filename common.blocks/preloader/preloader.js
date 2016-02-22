@@ -7,19 +7,21 @@ modules.define(
 				js: {
 					inited: function() {
 						var _this = this;
-						
-						this.show();
 						$(document).ready(function() {
-							_this.domElem.animate({ opacity: 0 }, 500, _this.hide);
+							_this.domElem.animate({ opacity: 0 }, 500, function() {
+								_this.hide();
+							})
 						});
+					}
+				},
+				visible: {
+					'': function() {
+						BEMDOM.destruct(this.domElem, false);
 					}
 				}
 			},
-			show: function() {
-				this.domElem.css('display', 'block');
-			},
 			hide: function() {
-				$(this).css('display', 'none');
+				this.delMod('visible');
 			}
 		}));
 	}

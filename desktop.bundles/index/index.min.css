@@ -11,6 +11,11 @@
   background: #fff url("http://coventry.aisconverse.com/images/preloader.gif") 50% no-repeat;
 }
 /* ../../common.blocks/preloader/preloader.styl:end */
+/* ../../common.blocks/preloader/_visible/preloader_visible.styl:begin */
+.preloader_visible {
+  display: block;
+}
+/* ../../common.blocks/preloader/_visible/preloader_visible.styl:end */
 /* ../../common.blocks/sidebar/sidebar.styl:begin */
 .sidebar {
   position: fixed;
