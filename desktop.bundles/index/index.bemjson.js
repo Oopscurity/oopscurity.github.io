@@ -98,7 +98,31 @@ module.exports = {
                     block: 'slider',
                     js: { together: 2, wheel: 'page', minItemWidth: 240 },
                     content: [
-                        {}, {}, {}, {}, {}
+                        {
+                            title: 'Babershop',
+                            url: 'http://oopscurity.github.io/website-templates/001/dest/index.html',
+                            image: 'http://oopscurity.github.io/website-templates/001/dest/img/index.jpg'
+                        },
+                        {
+                            title: 'Identity',
+                            url: 'http://oopscurity.github.io/website-templates/028/desktop.bundles/index/index.html',
+                            image: 'http://oopscurity.github.io/website-templates/028/desktop.bundles/index/img/page_min.jpg'
+                        },
+                        {
+                            title: 'Babershop',
+                            url: 'http://oopscurity.github.io/website-templates/001/dest/index.html',
+                            image: 'http://oopscurity.github.io/website-templates/001/dest/img/index.jpg'
+                        },
+                        {
+                            title: 'Identity',
+                            url: 'http://oopscurity.github.io/website-templates/028/desktop.bundles/index/index.html',
+                            image: 'http://oopscurity.github.io/website-templates/028/desktop.bundles/index/img/page_min.jpg'
+                        },
+                        {
+                            title: 'Babershop',
+                            url: 'http://oopscurity.github.io/website-templates/001/dest/index.html',
+                            image: 'http://oopscurity.github.io/website-templates/001/dest/img/index.jpg'
+                        }
                     ].map(function(item) {
                         return [
                             {
@@ -108,7 +132,7 @@ module.exports = {
                                         block: 'image',
                                         js: false,
                                         mix: { block: 'slider', elem: 'image' },
-                                        url: 'http://oopscurity.github.io/website-templates/001/dev/img/index.jpg'
+                                        url: item.image
                                     },
                                     {
                                         elem: 'text-group',
@@ -117,7 +141,7 @@ module.exports = {
                                                 block: 'text',
                                                 mods: { type: 'title', ctx: 'article' },
                                                 mix: { block: 'slider', elem: 'name' },
-                                                content: 'Barbershop'
+                                                content: item.title
                                             },
                                             {
                                                 block: 'text',
@@ -127,7 +151,7 @@ module.exports = {
                                                     {
                                                         block: 'link',
                                                         mix: { block: 'slider', elem: 'link' },
-                                                        url: 'http://oopscurity.github.io/website-templates/001/dest/index.html',
+                                                        url: item.url,
                                                         content: 'visit'
                                                     }
                                                 ]
