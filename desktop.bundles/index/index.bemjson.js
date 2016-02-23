@@ -96,7 +96,7 @@ module.exports = {
             content: [
                 {
                     block: 'slider',
-                    js: { together: 2, wheel: 'page' },
+                    js: { together: 2, wheel: 'page', minItemWidth: 240 },
                     content: [
                         {}, {}, {}, {}, {}
                     ].map(function(item) {
